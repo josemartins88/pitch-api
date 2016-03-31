@@ -1,0 +1,7 @@
+import pitch.search.Venue
+
+model {
+	Venue venue
+}
+
+json tmpl.venue(venue)

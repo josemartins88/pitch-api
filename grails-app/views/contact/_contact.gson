@@ -1,0 +1,11 @@
+import pitch.search.Contact
+
+model {
+	Contact contact
+}
+
+json {
+	telephone contact.telephone
+	email contact.email
+}
+

@@ -1,0 +1,7 @@
+import pitch.search.FloorType
+
+model {
+	FloorType floorType
+}
+
+json tmpl.floorType(floorType)

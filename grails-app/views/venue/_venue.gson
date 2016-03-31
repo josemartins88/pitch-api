@@ -1,0 +1,7 @@
+import pitch.search.Venue
+
+model {
+	Venue venue
+}
+
+json g.render(venue)

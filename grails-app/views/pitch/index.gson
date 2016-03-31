@@ -1,0 +1,8 @@
+import pitch.search.Pitch
+
+model {
+	Iterable<Pitch> pitchList
+}
+
+json tmpl.pitch(pitchList ?: [])
+

@@ -1,0 +1,7 @@
+import pitch.search.FloorType
+
+model {
+	FloorType floorType
+}
+
+json g.render(floorType)

@@ -1,0 +1,8 @@
+import pitch.search.FloorType
+
+model {
+	Iterable<FloorType> floorTypeList
+}
+
+json tmpl.floorType(floorTypeList ?: [])
+

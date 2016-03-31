@@ -1,0 +1,8 @@
+import pitch.search.Venue
+
+model {
+	Iterable<Venue> venueList
+}
+
+json tmpl.venue(venueList ?: [])
+

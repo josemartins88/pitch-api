@@ -1,0 +1,7 @@
+import pitch.search.Contact
+
+model {
+	Contact contact
+}
+
+json tmpl.contact(contact)
