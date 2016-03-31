@@ -1,8 +1,5 @@
 package pitch.search
 
-import grails.rest.Resource
-
-@Resource(uri = '/pitches', formats=['json', 'xml'])
 class Pitch {
 
     static belongsTo = [venue: Venue]
@@ -10,6 +7,7 @@ class Pitch {
     String description
     Integer length
     Integer width
+    Integer pricePerHour
     Boolean bibsIncluded
     Boolean ballIncluded
     Long latitude
@@ -23,5 +21,8 @@ class Pitch {
         floorType nullable: true
         latitude blank:false
         longitude blank:false
+        length min:0
+        width min:0
+        pricePerHour nullable:false, min:0
     }
 }
