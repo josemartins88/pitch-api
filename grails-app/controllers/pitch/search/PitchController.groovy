@@ -37,6 +37,7 @@ class PitchController {
             if (params.ballIncluded != null) {
                 eq("ballIncluded", params.boolean("ballIncluded"))
             }
+            order("pricePerHour", "asc")
         }
         respond results
     }
