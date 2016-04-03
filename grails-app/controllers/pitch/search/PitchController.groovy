@@ -12,7 +12,6 @@ class PitchController {
 
     def index(Integer max, Integer offset) {
         params.max = Math.min(max ?: 10, 100)
-        params.offset = Math.min(offset ?: 0, 10)
         def searchCriteria = Pitch.createCriteria()
         def results = searchCriteria.list(params) {
             if (params.minPrice) {
