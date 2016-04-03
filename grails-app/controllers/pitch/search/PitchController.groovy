@@ -10,9 +10,11 @@ class PitchController {
     static responseFormats = ['json', 'xml']
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
-    def index() {
+    def index(Integer max, Integer offset) {
+        params.max = Math.min(max ?: 10, 100)
+        params.offset = Math.min(offset ?: 0, 10)
         def searchCriteria = Pitch.createCriteria()
-        def results = searchCriteria {
+        def results = searchCriteria.list(params) {
             if (params.minPrice) {
                 ge("pricePerHour", params.int("minPrice"))
             }
@@ -38,6 +40,7 @@ class PitchController {
                 eq("ballIncluded", params.boolean("ballIncluded"))
             }
             order("pricePerHour", "asc")
+
         }
         respond results
     }
