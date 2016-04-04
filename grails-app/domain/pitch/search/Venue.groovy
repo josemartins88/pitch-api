@@ -15,6 +15,6 @@ class Venue {
         name blank:false
         description blank:false
         fullAddress blank:false
-        contact nullable:true
+        contact nullable:false
     }
 }

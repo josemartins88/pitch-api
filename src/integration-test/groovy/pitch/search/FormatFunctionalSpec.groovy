@@ -9,7 +9,7 @@ import static org.springframework.http.HttpStatus.*
 
 @Integration
 @Rollback
-class SizeTypeFunctionalSpec extends GebSpec {
+class FormatFunctionalSpec extends GebSpec {
 
     RestBuilder getRestBuilder() {
         new RestBuilder()
@@ -59,7 +59,7 @@ class SizeTypeFunctionalSpec extends GebSpec {
         then:"The response is correct"
         response.status == CREATED.value()
         response.json.id
-        SizeType.count() == 1
+        Format.count() == 1
     }
 
     void "Test the update action correctly updates an instance"() {
@@ -133,6 +133,6 @@ class SizeTypeFunctionalSpec extends GebSpec {
 
         then:"The response is correct"
         response.status == NO_CONTENT.value()        
-        !SizeType.get(id)
+        !Format.get(id)
     }    
 }

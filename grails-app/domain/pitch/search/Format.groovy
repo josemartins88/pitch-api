@@ -2,8 +2,8 @@ package pitch.search
 
 import grails.rest.Resource
 
-@Resource(uri = '/sizeTypes', formats=['json', 'xml'])
-class SizeType {
+@Resource(uri = '/formats', formats=['json', 'xml'])
+class Format {
 
     String type
 

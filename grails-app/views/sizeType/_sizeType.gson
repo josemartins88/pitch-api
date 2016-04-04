@@ -1,7 +1,0 @@
-import pitch.search.SizeType
-
-model {
-	SizeType sizeType
-}
-
-json g.render(sizeType)

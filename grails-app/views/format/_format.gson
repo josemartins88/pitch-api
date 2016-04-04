@@ -1,0 +1,7 @@
+import pitch.search.Format
+
+model {
+	Format format
+}
+
+json g.render(format)
