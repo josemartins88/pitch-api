@@ -1,8 +1,8 @@
 import pitch.search.Format
 
 model {
-	Iterable<Format> sizeTypeList
+	Iterable<Format> formatList
 }
 
-json tmpl.sizeType(sizeTypeList ?: [])
+json tmpl.format(formatList ?: [])
 

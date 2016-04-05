@@ -1,7 +1,7 @@
 import pitch.search.Format
 
 model {
-	Format sizeType
+	Format format
 }
 
-json tmpl.sizeType(sizeType)
+json tmpl.format(format)
