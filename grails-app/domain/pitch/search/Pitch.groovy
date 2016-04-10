@@ -20,7 +20,7 @@ class Pitch {
     static constraints = {
         name blank:false
         description blank:false
-        floorType nullable: true
+        floorType nullable: false
         format nullable:false
         latitude blank:false
         longitude blank:false
